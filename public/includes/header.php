@@ -10,5 +10,9 @@
 
     <title></title>
   </head>
-  <body class="bg-light">
+  <body class="bg-light  text-dark">
+    <div class="container">
+
+       <h1>Atividades</h1>
+       <p>Crud de atividades</p>
     
