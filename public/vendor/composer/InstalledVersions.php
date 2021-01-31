@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '610de1ecc2ebbcf1a62ec88897ccb62b66c37a97',
+    'reference' => '0ad01d50a310fd16c0516216c9bccc105933b16b',
     'name' => 'tarefas/ic',
   ),
   'versions' => 
@@ -42,7 +42,23 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '610de1ecc2ebbcf1a62ec88897ccb62b66c37a97',
+      'reference' => '0ad01d50a310fd16c0516216c9bccc105933b16b',
+    ),
+    'twbs/bootstrap' => 
+    array (
+      'pretty_version' => 'v5.0.0-beta1',
+      'version' => '5.0.0.0-beta1',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '63f3d939eaceeb84dcc77a7392953bcc8c5bc0a3',
+    ),
+    'twitter/bootstrap' => 
+    array (
+      'replaced' => 
+      array (
+        0 => 'v5.0.0-beta1',
+      ),
     ),
   ),
 );
