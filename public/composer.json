@@ -1,0 +1,10 @@
+{
+    
+    "name":"tarefas/ic",
+    "description": "crud de tarefas",
+    "autoload": {
+        "psr-4": {
+            "App\\":"app/"
+        }
+    }
+}
