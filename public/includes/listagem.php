@@ -6,10 +6,17 @@
                             <td>'.$tarefa->id.'</td>
                             <td>'.$tarefa->tarefa.'</td>
                             <td>'.$tarefa->descricao.'</td>
-                            <td>'.$tarefa->status.'</td>
+                            <td>'.($tarefa->pendente == 'p' ? 'Pendente' : 'Concluída').'</td>
                             <td>'.$tarefa->organizacao.'</td>
                             <td>'.$tarefa->usuario.'</td>
-                            <td>'.$tarefa->data.'</td>';
+                            <td>'.date('d/m/Y à\s H:i:s',strtotime($tarefa->data)).'</td>
+                            <td>
+                            <a href="editar.php?id='.$tarefa->id.'">
+                            <button type="button" class="btn"><i class="bi bi-pencil-square" style="color: #6f67d6;"></i></button></a>
+                            <button type="button" class="btn"><i class="bi bi-trash" style="color: red;"></i></button></a>
+                        
+                            </td>
+                        </tr>';
                            
     }
 
@@ -24,7 +31,7 @@
 
     <section class="mt-5">
 
-    <table class="table mt-3">
+    <table class="table" style="background-color:#fff; border-radius:10px 10px 0 0;">
     
         <thead style="background-color:#b7b9f4; color:#fff;">
             <tr>
