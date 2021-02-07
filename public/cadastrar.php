@@ -14,7 +14,9 @@
         $obTarefa->organizacao = $_POST['organizacao'];
         $obTarefa->usuario = $_POST['usuario'];
         $obTarefa->cadastrar();
-      
+
+        header('location: index.php?status=success');
+        exit;
     }
 
 
