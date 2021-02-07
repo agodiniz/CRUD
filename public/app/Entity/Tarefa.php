@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use \App\Db\Database;
+
 class Tarefa {
     //identificador único para cada tarefa
 
@@ -22,13 +24,14 @@ class Tarefa {
     public $data;
 
 
-    //Metodo responsavel por cadastrar nova vaga
+    //Metodo responsavel por cadastrar nova tarefa
     public function cadastrar(){
         //definir a data
         $this->data = date('Y-m-d H:i:s');
 
         //inserir a tarefa no banco
-
+        $obDatabase = new Database('ic_tarefas');
+        echo "<pre>"; print_r($obDatabase); echo "</pre>"; exit;
 
         //atribuir o id da tarefa na instacia
 

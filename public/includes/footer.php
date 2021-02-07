@@ -1,7 +1,9 @@
 <!-- final da container -->
 </div>
 
-
+<footer class="d-flex justify-content-center mt-5 p-3 bg-dark">
+<spam class="text-light">CRUD PHP com Bootstrap 5 - Todos os direitos reservados. Desenvolvido por <a href="https://github.com/agodiniz">Tiago Diniz</a> <i class="bi bi-github"></i></spam>
+</footer>
 
 
     <!-- Optional JavaScript; choose one of the two! -->

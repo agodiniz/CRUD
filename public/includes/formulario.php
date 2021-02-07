@@ -5,7 +5,8 @@
         </a>
     </section>
 
-    <h2 class="mt-3">Criar nova tarefa</h2>
+<div class="container-fluid card mt-3">
+    <h3 class="mt-3">Criar nova tarefa</h3>
 
     <form method="post">
 
@@ -50,7 +51,7 @@
     <input type="text" class="form-control" name="usuario" placeholder="Para quem você deseja atribuir essa tarefa?">
     </div>
 
-    <div class="form-group mt-3">
+    <div class="form-group mt-3 mb-3">
     <button type="submit" class="btn btn-success">Criar tarefa</button>
     </div>
 
@@ -58,4 +59,5 @@
 
     </form>
 
+</div>
 </main>
