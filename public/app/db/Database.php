@@ -85,6 +85,35 @@ class Database{
         return $this->execute($query);
     }
 
+    
+    //METODO RESPONSAVEL POR EXECUTAR ATUALIZAÇÕES NO BANCO DE DADOS
+
+    public function update($where,$values){
+       //DADOS DA QUERY
+    $fields = array_keys($values);
+
+    //MONTA A QUERY
+    $query = 'UPDATE '.$this->table.' SET '.implode('=?,',$fields).'=? WHERE '.$where;
+
+    //EXECUTAR A QUERY
+    $this->execute($query,array_values($values));
+
+    //RETORNA SUCESSO
+    return true;;
+    }
+
+    //METODO RESPONSAVEL POR EXCLUIR DADOS DO BANCO
+    public function delete($where){
+      //MONTA A QUERY
+      $query = 'DELETE FROM '.$this->table.' WHERE '.$where;
+
+      //EXECUTA A QUERY
+      $this->execute($query);
+
+      //RETORNA SUCESSO
+      return true;
+    }
+
  }
 
 

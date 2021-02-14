@@ -2,12 +2,17 @@
 
     require __DIR__.'/vendor/autoload.php';
 
+    define('TITLE','Cadastrar vaga');
+    define('BTN','Criar Tarefa');
+    
+
     use \App\Entity\Tarefa;
+    $obTarefa = new Tarefa;
     
 
     // Validando tarefas e instanciando
-    if(isset($_POST['tarefa'],$_POST['descricao'],$_POST['organizacao'],$_POST['usuario'])){
-        $obTarefa = new Tarefa;
+    if(isset($_POST['tarefa'],$_POST['descricao'],$_POST['pendente'],$_POST['organizacao'],$_POST['usuario'])){
+        
         $obTarefa->tarefa = $_POST['tarefa'];
         $obTarefa->descricao = $_POST['descricao'];
         $obTarefa->pendente = $_POST['pendente'];

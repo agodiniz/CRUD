@@ -35,7 +35,7 @@ class Tarefa {
         $this->id = $obDatabase->insert([
             'tarefa' => $this->tarefa,
             'descricao' => $this->descricao,
-            'status' => $this->pendente,
+            'pendente' => $this->pendente,
             'organizacao' => $this->organizacao,
             'usuario' => $this->usuario,
             'data' => $this->data
@@ -46,9 +46,34 @@ class Tarefa {
 
     }
 
+    //METODO RESPONSAVEL POR ATUALIZAR A VAGA NO BANCO
+    public function atualizar(){
+        return (new Database('tarefas'))->update('id = '.$this->id,[
+            'tarefa' => $this->tarefa,
+            'descricao' => $this->descricao,
+            'pendente' => $this->pendente,
+            'organizacao' => $this->organizacao,
+            'usuario' => $this->usuario,
+            'data' => $this->data
+        ]);
+    }
+
+    //METODO RESPONSAVEL POR EXCLUIR A TAREFA NO BANCO
+    public function excluir(){
+        return (new Database('tarefas'))->delete('id = '.$this->id);
+    }
+
+
     //METODO RESPONSAVEL POR OBTER AS VAGAS NO BANCO
     public static function getTarefas($where = null, $order = null, $limit = null){
         return (new Database('tarefas'))->select($where,$order,$limit)
         ->fetchAll(PDO::FETCH_CLASS,self::class);
+    }
+
+
+    //METODO RESPONSAVEL POR BUSCAR UMA TAREFA COM BASE NO SEU ID
+    public static function getTarefa($id){
+        return (new Database('tarefas'))->select('id = '.$id)
+                                        ->fetchObject(self::class);
     }
 }
