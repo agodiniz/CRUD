@@ -37,6 +37,12 @@ $mensagem = '';
                            
     }
 
+    $resultados = strlen($resultados) ? $resultados : '<tr>
+                                                       <td colspan="6" class="text-center">
+                                                              Nenhuma Tarefa foi criada
+                                                       </td>
+                                                    </tr>';
+
 ?>
 
 <main>
