@@ -1,5 +1,18 @@
 <?php
 
+$mensagem = '';
+  if(isset($_GET['status'])){
+    switch ($_GET['status']) {
+      case 'success':
+        $mensagem = '<div class="alert alert-success">Ação executada com sucesso!</div>';
+        break;
+
+      case 'error':
+        $mensagem = '<div class="alert alert-danger">Ação não executada!</div>';
+        break;
+    }
+  }
+
     $resultados = '';
     foreach($tarefas as $tarefa){
         $resultados .= '<tr>
@@ -27,6 +40,9 @@
 ?>
 
 <main>
+
+<?=$mensagem?>
+
     <section>
         <a href="cadastrar.php">
             <button class="btn btn-success"><i class="bi bi-plus" style="margin: 0 5px 0 0;"></i>Criar tarefa</button>
