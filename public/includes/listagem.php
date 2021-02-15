@@ -19,7 +19,7 @@ $mensagem = '';
                             <td>'.$tarefa->id.'</td>
                             <td>'.$tarefa->tarefa.'</td>
                             <td>'.$tarefa->descricao.'</td>
-                            <td>'.($tarefa->pendente == 's' ? 'Pendente' : 'Concluída').'</td>
+                            <td><span class="badge badge-info">'.($tarefa->pendente == 's' ? 'Pendente' : 'Concluída').'</span></td>
                             <td>'.$tarefa->organizacao.'</td>
                             <td>'.$tarefa->usuario.'</td>
                             <td>'.date('d/m/Y à\s H:i:s',strtotime($tarefa->data)).'</td>
